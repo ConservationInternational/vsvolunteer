@@ -2,8 +2,8 @@ import psycopg2
 from elasticsearch import Elasticsearch
 import json
 
-hostname = 'localhost'
-username = 'postgres'
+hostname = '54.242.126.6'
+username = 'volunteer'
 password = 'password'
 database = 'vitalsigns_staging'
 
