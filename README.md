@@ -22,9 +22,9 @@ In order to create a data visualization in Kibana, the data you wish to work wit
 See postgresToElasticSearch.py as an example.
 
 ## Creating Data Visualization in Kibana
-After you run your python script, navigate to your local kibana instance and configure a visualization. Consult the [Kibana User Guide] (https://www.elastic.co/guide/en/kibana/current/index.html) as needed.
+After you run your python script, navigate to your local kibana instance and configure a visualization. Consult the [Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html) as needed.
 
-When your visualization is complete, export it following the instructions here: https://discuss.elastic.co/t/how-to-save-dashboard-as-json-file/24561/4
+When your visualization is complete, [export it to a JSON file](https://discuss.elastic.co/t/how-to-save-dashboard-as-json-file/24561/4).
 
 Commit the JSON export file to your repository.
 
