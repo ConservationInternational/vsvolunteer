@@ -27,9 +27,9 @@ def doQuery( conn ) :
         	del row[1]["latitude"]
         	del row[1]["longitude"]
 
-        #res = es.index(
-        #	index=viewName, doc_type=viewName, id=row[0], body=row[1]
-        #	)
+        res = es.index(
+        	index=viewName, doc_type=viewName, id=row[0], body=row[1]
+        	)
         status="Row ID: " + row[0] + " | Created: " + str(res['created']) + " | Result: " + res['result']
         print(status)
 		
