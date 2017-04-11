@@ -34,7 +34,7 @@ def doQuery( conn ) :
 	#	print(status)
 	
 	viewName = "curation__household_secB"
-	cur.execute( 'SELECT uuid AS id, row_to_json(' + viewName + ') AS body FROM ' + viewName)
+	cur.execute( 'SELECT uuid AS id, row_to_json("' + viewName + '") AS body FROM "' + viewName + '"')
 	
 	for row in cur.fetchall():
 
