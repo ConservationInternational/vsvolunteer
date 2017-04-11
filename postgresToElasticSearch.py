@@ -3,8 +3,8 @@ from elasticsearch import Elasticsearch
 import json
 
 hostname = 'localhost'
-username = 'volunteer'
-password = 'password'
+username = 'readonly'
+password = 'readonly'
 database = 'vitalsigns_staging'
 
 es = Elasticsearch()
