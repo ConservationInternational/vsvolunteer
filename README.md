@@ -15,14 +15,26 @@ password: password
 host: 54.242.126.6
 
 
-## Transcribe Data From Prosgres to ElasticSearch (ETL step)
+## Transcribe Data From Postgres to ElasticSearch (ETL step)
 
 In order to create a data visualization in Kibana, the data you wish to work with must be loaded into ElasticSearch. To do this, we typically use python scripts to query data from postgres and output it to ElasticSearch. The python script could be as simple as querying a few selected columns from a table, or it could be more complex and could programmatically aggregate and transform data.
 
 See postgresToElasticSearch.py as an example.
 
 ## Creating Data Visualization in Kibana
-After you run your python script, navigate to your local kibana instance and configure a visualization. Consult the [Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html) as needed.
+After you run your python script, navigate to your local kibana instance and configure a visualization.
+
+To perform this task, you must first create a new index pattern. This can be done by following these steps:
+
+1) In Kibana, select "Management" from the left-side tab.
+2) Select "Index Patterns" on the following screen.
+3) Locate the “Add New” button in the top left hand corner and click the button.
+4) On the following page, update the “Index name or Pattern” field to be the name of the index imported (i.e. curation__household_secb).
+   - Note: To update the available indexes you will have to click outside the text field.
+   - There will be a dropdown that will allow indexing on a time-based event.
+     - This is optional, although it is important to keep in mind if the number of documents (rows in the DB) increases as time passes, indexing on a time-based field will allow searches to target the most recent documents. ( ref. https://www.elastic.co/guide/en/elasticsearch/guide/current/time-based.html ).
+
+Consult the [Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html) as needed.
 
 When your visualization is complete, [export it to a JSON file](https://discuss.elastic.co/t/how-to-save-dashboard-as-json-file/24561/4).
 
