@@ -34,6 +34,8 @@ To perform this task, you must first create a new index pattern. This can be don
    - There will be a dropdown that will allow indexing on a time-based event.
      - This is optional, although it is important to keep in mind if the number of documents (rows in the DB) increases as time passes, indexing on a time-based field will allow searches to target the most recent documents. ( ref. https://www.elastic.co/guide/en/elasticsearch/guide/current/time-based.html ).
 
+Your newly imported data will now be available for creating visualizations.
+
 Consult the [Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html) as needed.
 
 When your visualization is complete, [export it to a JSON file](https://discuss.elastic.co/t/how-to-save-dashboard-as-json-file/24561/4).
